@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "vc_print_words.h": "c",
+    "stdio.h": "c",
+    "stdlib.h": "c"
+  }
+}
