@@ -6,32 +6,24 @@
 # /*                                      */
 # /* ************************************ */
 
-# all
+all: main.o putstr.o strcmp.o strlen.o swap.o
 
-all: program
+main: main.o ./includes/libvc.h
+	gcc -o program main.o vc_putstr.o vc_strcmp.o vc_strlen.o vc_swap.o
 
-putstr: ./src/vc_putstr.o
-	gcc -o program vc_putstr.o -L./src/ -lvc_putstr
+main.o: main.c ./includes/libvc.h
+	gcc -c main.c
 
 putstr.o: ./src/vc_putstr.c ./includes/libvc.h
 	gcc -c ./src/vc_putstr.c
 
-strcmp: ./src/vc_strcmp.o
-	gcc -o program ./src/vc_strcmp.o -L./src/ -lvc_strcmp
-
-putstr.o: ./src/vc_strcmp.c ./includes/libvc.h
+strcmp.o: ./src/vc_strcmp.c ./includes/libvc.h
 	gcc -c ./src/vc_strcmp.c
 
-putstr: ./src/vc_strlen.o
-	gcc -o program ./src/vc_strlen.o -L./src/ -lvc_strlen
-
-putstr.o: ./src/vc_strlen.c ./includes/libvc.h
+strlen.o: ./src/vc_strlen.c ./includes/libvc.h
 	gcc -c ./src/vc_strlen.c
 
-putstr: ./src/vc_swap.o
-	gcc -o program ./src/vc_swap.o -L./src/ -lvc_swap
-
-putstr.o: ./src/vc_swap.c ./includes/libvc.h
+swap.o: ./src/vc_swap.c ./includes/libvc.h
 	gcc -c ./src/vc_swap.c
 
 clean:
@@ -40,5 +32,5 @@ clean:
 fclean:
 	rm -f *.o *.exe
 
-re:
-	clean make
+re: clean
+	make

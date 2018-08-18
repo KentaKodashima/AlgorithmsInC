@@ -1,17 +1,11 @@
 /* ************************************ */
 /*                                      */
-/* vc_strlen.c                          */
+/* libex6.h                             */
 /*                                      */
 /* By: Giada, Natsumi, Kenta            */
 /*                                      */
 /* ************************************ */
 
-int vc_strlen(char *str)
-{
-  int i;
-
-  i = 0;
-  while (*str++ != '\0')
-    i++;
-  return i;
-}
+int vc_atoi(char *str);
+void vc_putnbr(int nb);
+void vc_putstr(char *str);

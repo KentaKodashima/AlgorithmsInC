@@ -6,6 +6,6 @@
 # /*                                      */
 # /* ************************************ */
 
-gcc -c vc_putstr.c vc_strcmp.c vc_strlen.c vc_swap.c
-ar -cvq libvc.a vc_putstr.o vc_strcmp.o vc_strlen.o vc_swap.o
+gcc -c vc_putstr.c vc_atoi.c vc_putnbr.c
+ar -cvq libex6.a vc_putstr.o vc_atoi.o vc_putnbr.o
 rm -f *.o

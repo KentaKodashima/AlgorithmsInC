@@ -1,3 +1,11 @@
+/* ************************************ */
+/*                                      */
+/* libvc.h                             */
+/*                                      */
+/* By: Giada, Natsumi, Kenta            */
+/*                                      */
+/* ************************************ */
+
 void vc_putstr(char *str);
 int vc_strlen(char *str);
 void vc_swap(int *a, int *b);

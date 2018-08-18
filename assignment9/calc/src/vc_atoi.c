@@ -1,17 +1,20 @@
 /* ************************************ */
 /*                                      */
-/* vc_strlen.c                          */
+/* vc_atoi.c                            */
 /*                                      */
 /* By: Giada, Natsumi, Kenta            */
 /*                                      */
 /* ************************************ */
 
-int vc_strlen(char *str)
-{
-  int i;
+#include <stdio.h>
 
-  i = 0;
-  while (*str++ != '\0')
-    i++;
-  return i;
+int vc_atoi(char *str)
+{
+	int rint = 0;
+
+	for (int i = 0; str[i] != '\0'; i++)
+	{
+		rint = str[i] - '0';
+	}
+	return rint;
 }

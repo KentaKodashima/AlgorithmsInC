@@ -1,17 +1,22 @@
 /* ************************************ */
 /*                                      */
-/* vc_strlen.c                          */
+/* main.c (Testing purposes)            */
 /*                                      */
 /* By: Giada, Natsumi, Kenta            */
 /*                                      */
 /* ************************************ */
 
-int vc_strlen(char *str)
-{
-  int i;
+#include <stdio.h>
+#include "./includes/libvc.h"
 
-  i = 0;
-  while (*str++ != '\0')
-    i++;
-  return i;
+int main(int argc, char const *argv[])
+{
+  char *str = "Hello";
+
+  int result;
+  result = vc_strlen(str);
+
+  printf("%d\n", result);
+
+  return 0;
 }

@@ -1,10 +1,10 @@
-/**
- * File              : vc_strcmp.c
- * Author            : Derrick Park
- * Date              : Wed  8 Aug 22:49:53 2018
- * Last Modified Date: Wed  8 Aug 22:49:53 2018
- * Last Modified By  : Derrick Park
- */
+/* ************************************ */
+/*                                      */
+/* vc_strcmp.c                          */
+/*                                      */
+/* By: Giada, Natsumi, Kenta            */
+/*                                      */
+/* ************************************ */
 
 int vc_strcmp(char *s1, char *s2)
 {

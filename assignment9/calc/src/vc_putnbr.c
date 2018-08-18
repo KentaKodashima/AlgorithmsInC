@@ -1,6 +1,6 @@
 /* ************************************ */
 /*                                      */
-/* vc_putstr.c                          */
+/* vc_putnbr.c                          */
 /*                                      */
 /* By: Giada, Natsumi, Kenta            */
 /*                                      */
@@ -8,8 +8,22 @@
 
 #include <stdio.h>
 
-void vc_putstr(char *str)
+void vc_putnbr(int nb)
 {
-  while (*str != '\0')
-    putchar(*str++);
+  if (nb < 0)
+  {
+    nb = -nb;
+    putchar('-');
+  }
+
+  if (nb < 10)
+  {
+    // '0' == int 48
+    putchar(nb + '0');
+  }
+  else
+  {
+    vc_putnbr(nb / 10);
+    vc_putnbr(nb % 10);
+  }
 }
