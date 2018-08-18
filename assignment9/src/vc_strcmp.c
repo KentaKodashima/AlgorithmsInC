@@ -1,40 +1,17 @@
-/* ************************************ */
-/*                                      */
-/* vc_strcmp.c                          */
-/*                                      */
-/* By: Charles, EmreA, Kenta            */
-/*                                      */
-/* ************************************ */
-
-#include <stdio.h>
-
-int length(char *str) {
-  int counter = 0;
-  while (*str)
-  {
-    str++;
-    counter++;
-  }
-  return counter;
-}
+/**
+ * File              : vc_strcmp.c
+ * Author            : Derrick Park
+ * Date              : Wed  8 Aug 22:49:53 2018
+ * Last Modified Date: Wed  8 Aug 22:49:53 2018
+ * Last Modified By  : Derrick Park
+ */
 
 int vc_strcmp(char *s1, char *s2)
 {
-  int result = 0;
-  int s1Size = length(s1);
-  int s2Size = length(s2);
-  for (int i = 0; i < s1Size; i++) 
+  while (*s1 && (*s1 == *s2))
   {
-    if (s1[i] > s2[i]) 
-    {
-      result = 1;
-      break;
-    }
-    else if (s1[i] < s2[i])
-    {
-      result = -1;
-      break;
-    }
+    s1++;
+    s2++;
   }
-  return result;
+  return *(unsigned char *)s1 - *(unsigned char *)s2;
 }

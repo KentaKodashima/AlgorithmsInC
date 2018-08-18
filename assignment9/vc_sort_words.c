@@ -2,7 +2,7 @@
 /*                                      */
 /* vc_sort_words.c                      */
 /*                                      */
-/* By: Charles, Emre A, Kenta           */
+/* By: Giada, Natsumi, Kenta            */
 /*                                      */
 /* ************************************ */
 

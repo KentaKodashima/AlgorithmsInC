@@ -1,21 +1,17 @@
+/**
+ * File              : vc_strlen.c
+ * Author            : Derrick Park
+ * Date              : Tue 31 Jul 21:09:04 2018
+ * Last Modified Date: Tue 31 Jul 21:09:04 2018
+ * Last Modified By  : Derrick Park
+ */
 
-/* ************************************ */
-/*                                      */
-/* vc_strlen.c                          */
-/*                                      */
-/* By: Charles, EmreA, Kenta            */
-/*                                      */
-/* ************************************ */
-
-#include <stdio.h>
-
-int vc_strlen(char *str) 
+int vc_strlen(char *str)
 {
-  int counter = 0;
-  while (*str)
-  {
-    str++;
-    counter++;
-  }
-  return counter;
+  int i;
+
+  i = 0;
+  while (*str++ != '\0')
+    i++;
+  return i;
 }
