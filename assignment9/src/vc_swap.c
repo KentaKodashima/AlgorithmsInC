@@ -6,11 +6,11 @@
 /*                                      */
 /* ************************************ */
 
+#include <stdio.h>
+
 void vc_swap(int *a, int *b)
 {
-  int tmp;
-
-  tmp = *a;
-  *a = *b;
-  *b = tmp;
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }

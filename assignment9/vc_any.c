@@ -1,8 +1,8 @@
 /* ************************************ */
 /*                                      */
-/* vc_any.c                             */
+/* vc_any.c                             */  
 /*                                      */
-/* By: Giada, Natsumi, Kenta            */
+/* By: Charles, Emre A, Kenta           */
 /*                                      */
 /* ************************************ */
 
@@ -12,7 +12,7 @@ int getRowSize(char **tab)
 {
   int i = 0;
   int counter = 0;
-  while (*tab)
+  while(*tab)
   {
     counter++;
     tab++;
@@ -24,7 +24,7 @@ int getColSize(char *tab)
 {
   int i = 0;
   int counter = 0;
-  while (*tab)
+  while(*tab)
   {
     counter++;
     tab++;
@@ -44,7 +44,7 @@ int test(char *str)
       result = 1;
       break;
     }
-    else
+    else 
     {
       result = 0;
     }
@@ -52,14 +52,14 @@ int test(char *str)
   return result;
 }
 
-int vc_any(char **tab, int (*f)(char *))
+int vc_any(char **tab, int(*f)(char*))
 {
   int result = 1;
   int rowSize = getRowSize(tab);
   int colSize;
   int i = 0;
   int j = 0;
-  while (i < rowSize)
+  while(i < rowSize)
   {
     colSize = getColSize(tab[i]);
     for (j = 0; j < colSize; j++)
@@ -88,6 +88,6 @@ int main(int argc, char const *argv[])
   p = &test;
 
   printf("%d\n", vc_any(tab, p));
-
+  
   return 0;
 }

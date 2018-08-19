@@ -6,12 +6,15 @@
 /*                                      */
 /* ************************************ */
 
+#include <stdio.h>
+
 int vc_strlen(char *str)
 {
-  int i;
-
-  i = 0;
-  while (*str++ != '\0')
-    i++;
-  return i;
+  int counter = 0;
+  while (*str)
+  {
+    str++;
+    counter++;
+  }
+  return counter;
 }
