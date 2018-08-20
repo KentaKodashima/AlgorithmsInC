@@ -6,7 +6,7 @@
 # /*                                      */
 # /* ************************************ */
 
-all: main.o putstr.o strcmp.o strlen.o swap.o
+all: main.o
 
 main: main.o ./src/libvc.a
 	gcc -o program ./src/libvc.a main.o
