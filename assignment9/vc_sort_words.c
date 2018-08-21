@@ -149,12 +149,3 @@ void vc_sort_words(char **words)
   printf("%s\n", words[2]);
   printf("%s\n", words[3]);
 }
-
-int main(int argc, char const *argv[])
-{
-  char *p = "Hello world im here";
-
-  vc_sort_words(vc_split_whitespaces(p));
-
-  return 0;
-}

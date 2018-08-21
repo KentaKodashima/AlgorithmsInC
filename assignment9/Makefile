@@ -6,7 +6,7 @@
 # /*                                      */
 # /* ************************************ */
 
-all: main.o
+all: main.o main
 
 main: main.o ./src/libvc.a
 	gcc -o program ./src/libvc.a main.o

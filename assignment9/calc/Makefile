@@ -6,7 +6,7 @@
 # /*                                      */
 # /* ************************************ */
 
-all: calc.o
+all: calc.o calc
 
 calc: calc.o ./src/libex6.a
 	gcc -o calc calc.o ./src/libex6.a

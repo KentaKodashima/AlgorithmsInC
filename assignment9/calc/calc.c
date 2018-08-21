@@ -67,12 +67,3 @@ int calc(char *val1, char *opt, char *val2)
 
   return checkOperator(opt[0], val1Int, val2Int);
 }
-
-int main(int argc, char *argv[])
-{
-
-  int result = calc(argv[1], argv[2], argv[3]);
-  printf("%d\n", result);
-
-  return 0;
-}

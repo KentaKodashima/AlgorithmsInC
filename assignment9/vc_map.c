@@ -23,16 +23,3 @@ int *vc_map(int *tab, int length, int (*f)(int))
   }
   return tab;
 }
-
-int main(int argc, char const *argv[])
-{
-  int arr[3] = {48, 50, 56};
-  int (*p)(int);
-  p = &test;
-  int *tab = vc_map(arr, 3, p);
-  printf("%d\n", tab[0]);
-  printf("%d\n", tab[1]);
-  printf("%d\n", tab[2]);
-
-  return 0;
-}
