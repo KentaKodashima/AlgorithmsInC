@@ -27,8 +27,9 @@ int vc_str_is_alpha(char *str)
   int result = 1;
   int counter = 0;
 
-  while(*str) {
-    if (*str < 65 || (*str > 90 && *str < 97) || *str > 122) 
+  while (*str)
+  {
+    if (*str < 65 || (*str > 90 && *str < 97) || *str > 122)
     {
       result = 0;
       break;
@@ -43,4 +44,3 @@ int vc_str_is_alpha(char *str)
 
   return result;
 }
-
